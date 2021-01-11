@@ -1,0 +1,176 @@
+:root {
+  --font: 'Poppins', sans-serif;
+  --warm-black: #585858;
+  --soft-blue: #a0d3e0;
+  --soft-orange: #e0c2a0;
+  --soft-violet: #e0a0d0;
+  --dark-violet: #da3ab2;
+  --dark-orange: #f19e40;
+}
+
+$breakpoits: (
+  s: 460px,
+  m: 768px,
+  l: 1024px,
+  x: 1200px,
+  xl: 1400px,
+);
+
+@mixin from($bp) {
+  @if (map-has-key($breakpoits, $bp)) {
+    @media screen and (min-width: map-get($breakpoits, $bp)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $bp) {
+      @content;
+    }
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+body {
+  font-family: var(--font);
+}
+.kick-track {
+  width: 100%;
+  min-width: 288px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.pads {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 0 1rem 0;
+  @include from(x) {
+    gap: 1rem;
+  }
+}
+.pad {
+  width: 50px;
+  height: 50px;
+  @include from(s) {
+    width: 70px;
+    height: 70px;
+  }
+  @include from(m) {
+    width: 70px;
+    height: 70px;
+  }
+  @include from(l) {
+    width: 100px;
+    height: 100px;
+  }
+}
+.btn {
+  border: none;
+  background-color: #000;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  &:active {
+    transform: scale(0.98);
+  }
+}
+.track {
+  @include from(l) {
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+  &__name {
+    font-size: 2.8rem;
+    padding: 1rem 0 1rem 0;
+    @include from(l) {
+      width: 20%;
+    }
+  }
+  &__sound {
+    width: 50px;
+    height: 50px;
+    background-color: var(--warm-black);
+    color: #fff;
+    font-size: 1.9rem;
+    border-radius: 0.5rem;
+  }
+  &__selected {
+    width: 60%;
+    max-width: 60%;
+    min-width: 30%;
+    height: 50px;
+    margin-left: 2rem;
+    border: 1px solid var(--warm-black);
+    cursor: pointer;
+    @include from(s) {
+      width: 30%;
+    }
+    @include from(m) {
+      width: 30%;
+      font-size: 1.8rem;
+    }
+    @include from(l) {
+      width: 30%;
+    }
+  }
+  &__controls {
+    @include from(l) {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
+}
+.kick-pad {
+  background-color: var(--soft-blue);
+  &.active {
+    background-color: blue;
+  }
+}
+.snare-pad {
+  background-color: var(--soft-violet);
+  &.active {
+    background-color: var(--dark-violet);
+  }
+}
+.hihat-pad {
+  background-color: var(--soft-orange);
+  &.active {
+    background-color: var(--dark-orange);
+  }
+}
+.btn-start {
+  width: 40%;
+  height: 50px;
+  margin-bottom: 1rem;
+  font-size: 1.9rem;
+  background-color: var(--warm-black);
+  color: #fff;
+  border-radius: 0.5rem;
+  @include from(m) {
+    width: 18%;
+    margin-top: 5rem;
+  }
+  @include from(l) {
+    width: 10%;
+  }
+}

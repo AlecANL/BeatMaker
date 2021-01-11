@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Simple App BeatMaker" />
+    <title>BeatMaker | App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="track kick-track">
+        <div class="track__controls">
+          <h2 class="track__name">Kick</h2>
+          <button class="btn track__sound">
+            <em class="fas fa-volume-up"></em>
+          </button>
+          <select
+            class="track__selected"
+            name=" kick-selected"
+            id="kick-selected"
+          >
+            <option value="1">Value1</option>
+            <option value="2">Value2</option>
+            <option value="3">Value3</option>
+          </select>
+        </div>
+        <div class="kick pads">
+          <div class="pad kick-pad p0"></div>
+          <div class="pad kick-pad p1"></div>
+          <div class="pad kick-pad p2"></div>
+          <div class="pad kick-pad p3"></div>
+          <div class="pad kick-pad p4"></div>
+          <div class="pad kick-pad p5"></div>
+          <!-- <div class="pad kick-pad p6"></div> -->
+          <!-- <div class="pad kick-pad p7"></div> -->
+        </div>
+      </section>
+      <section class="track kick-track">
+        <div class="track__controls">
+          <h2 class="track__name">Snare</h2>
+          <button class="btn track__sound">
+            <em class="fas fa-volume-up"></em>
+          </button>
+          <select
+            class="track__selected"
+            name=" snare-selected"
+            id="snare-selected"
+          >
+            <option value="1">Value1</option>
+            <option value="2">Value2</option>
+            <option value="3">Value3</option>
+          </select>
+        </div>
+        <div class="kick pads">
+          <div class="pad snare-pad p0"></div>
+          <div class="pad snare-pad p1"></div>
+          <div class="pad snare-pad p2"></div>
+          <div class="pad snare-pad p3"></div>
+          <div class="pad snare-pad p4"></div>
+          <div class="pad snare-pad p5"></div>
+          <!-- <div class="pad snare-pad p6"></div> -->
+          <!-- <div class="pad snare-pad p7"></div> -->
+        </div>
+      </section>
+      <section class="track kick-track">
+        <div class="track__controls">
+          <h2 class="track__name">Hhihat</h2>
+          <button class="btn track__sound">
+            <em class="fas fa-volume-up"></em>
+          </button>
+          <select
+            class="track__selected"
+            name=" hihat-selected"
+            id="hihat-selected"
+          >
+            <option value="1">Value1</option>
+            <option value="2">Value2</option>
+            <option value="3">Value3</option>
+          </select>
+        </div>
+        <div class="kick pads">
+          <div class="pad hihat-pad p0 active"></div>
+          <div class="pad hihat-pad p1"></div>
+          <div class="pad hihat-pad p2"></div>
+          <div class="pad hihat-pad p3"></div>
+          <div class="pad hihat-pad p4"></div>
+          <div class="pad hihat-pad p5"></div>
+          <!-- <div class="pad hihat-pad p6"></div> -->
+          <!-- <div class="pad hihat-pad p7"></div> -->
+        </div>
+      </section>
+      <button class="btn btn-start">Play</button>
+    </main>
+    <audio class="kick-audio" src="./assets/audio/kick-acoustic01.wav"></audio>
+    <audio
+      src="./assets/audio/snare-acoustic01.wav"
+      class="snare-audio"
+    ></audio>
+    <audio
+      src="./assets/audio/hihat-acoustic01.wav"
+      class="hihat-audio"
+    ></audio>
+  </body>
+</html>

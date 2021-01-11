@@ -1,0 +1,232 @@
+:root {
+  --font: 'Poppins', sans-serif;
+  --warm-black: #585858;
+  --soft-blue: #a0d3e0;
+  --soft-orange: #e0c2a0;
+  --soft-violet: #e0a0d0;
+  --dark-violet: #da3ab2;
+  --dark-orange: #f19e40;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+body {
+  font-family: var(--font);
+}
+
+.kick-track {
+  width: 100%;
+  min-width: 288px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.pads {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 0 1rem 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .pads {
+    gap: 1rem;
+  }
+}
+
+.pad {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (min-width: 460px) {
+  .pad {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .pad {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .pad {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.btn {
+  border: none;
+  background-color: #000;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.btn:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+@media screen and (min-width: 1024px) {
+  .track {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40% 60%;
+        grid-template-columns: 40% 60%;
+  }
+}
+
+.track__name {
+  font-size: 2.8rem;
+  padding: 1rem 0 1rem 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .track__name {
+    width: 20%;
+  }
+}
+
+.track__sound {
+  width: 50px;
+  height: 50px;
+  background-color: var(--warm-black);
+  color: #fff;
+  font-size: 1.9rem;
+  border-radius: 0.5rem;
+}
+
+.track__selected {
+  width: 60%;
+  max-width: 60%;
+  min-width: 30%;
+  height: 50px;
+  margin-left: 2rem;
+  border: 1px solid var(--warm-black);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 460px) {
+  .track__selected {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .track__selected {
+    width: 30%;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .track__selected {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .track__controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.kick-pad {
+  background-color: var(--soft-blue);
+}
+
+.kick-pad.active {
+  background-color: blue;
+}
+
+.snare-pad {
+  background-color: var(--soft-violet);
+}
+
+.snare-pad.active {
+  background-color: var(--dark-violet);
+}
+
+.hihat-pad {
+  background-color: var(--soft-orange);
+}
+
+.hihat-pad.active {
+  background-color: var(--dark-orange);
+}
+
+.btn-start {
+  width: 40%;
+  height: 50px;
+  margin-bottom: 1rem;
+  font-size: 1.9rem;
+  background-color: var(--warm-black);
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-start {
+    width: 18%;
+    margin-top: 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .btn-start {
+    width: 10%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
